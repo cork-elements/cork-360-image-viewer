@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Demo - cork-360-image-viewer</title>
+    <script src="bundle.js"></script>
+  </head>
+  <body>
+    <cork-360-image-viewer total-frames="12" spin-fps="4"></cork-360-image-viewer>
+    <script>
+      let ele = document.querySelector('cork-360-image-viewer');
+      
+      ele.frameToImgPath = function(frame) {
+        frame++;
+        if( frame < 10 ) frame = '0'+frame;
+        return '/images/TeaTin-Test360-'+frame+'.jpg';
+      }
+
+      ele.render();
+      (async function() {
+        await ele.preload();
+        ele.spin();
+      })();
+    </script>
+  </body>
+</html>
