@@ -1,8 +1,9 @@
 {
   "name": "@ucd-lib/cork-360-image-viewer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "360 image viewer",
-  "main": "cork-360-imager.js",
+  "main": "cork-360-image-viewer.js",
+  "flat": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --config demo/webpack-watch.config.js --watch"
