@@ -132,6 +132,7 @@ export class Cork360ImageViewer extends PolymerElement {
   render() {
     let currentFrame = this.frame % this.totalFrames;
     if( currentFrame < 0 ) currentFrame = this.totalFrames + currentFrame;
+    if( !this.frameToImgPath(currentFrame) ) return;
     this.$.img.src = this.frameToImgPath(currentFrame);
     this.dispatchEvent(new CustomEvent('frame-render', {detail: {frame: currentFrame}}));
   }

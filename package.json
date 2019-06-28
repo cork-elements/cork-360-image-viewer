@@ -1,6 +1,6 @@
 {
   "name": "@ucd-lib/cork-360-image-viewer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "360 image viewer",
   "main": "cork-360-image-viewer.js",
   "flat": true,
